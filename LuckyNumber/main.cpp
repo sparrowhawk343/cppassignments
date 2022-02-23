@@ -6,7 +6,7 @@ int input;
 
 int main()
 {
-	cout << "Enter an integer value to check for luckiness: " << endl;
+	cout << "Enter an integer value to check for luck: " << endl;
 	cin >> input;
 
 }
