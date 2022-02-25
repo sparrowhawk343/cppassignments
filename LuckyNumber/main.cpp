@@ -5,6 +5,7 @@
 using namespace std;
 
 int input;
+bool lucky;
 
 void IsLucky(int number);
 
@@ -21,7 +22,21 @@ void IsLucky(int number) {
 	vector<char> digitsAsLetters;
 
 	for (char letter : conversion) {
-		digitsAsLetters.push_back(letter);
+		if (find(digitsAsLetters.begin(), digitsAsLetters.end(), letter) != digitsAsLetters.end())
+		{
+			cout << "The integer value " << input << " is not lucky." << endl;
+			lucky = false;
+			break;
+		}
+		else
+		{
+			digitsAsLetters.push_back(letter);
+		}
+		lucky = true;
+	}
+	if (lucky)
+	{
+		cout << "The integer value " << input << " is indeed a lucky number!" << endl;
 	}
 
 
